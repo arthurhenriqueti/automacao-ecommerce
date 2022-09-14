@@ -11,6 +11,8 @@ public class SectionWomenTests extends BaseTest {
     String msgSecaoCamisetas = "T-SHIRTS ";
     String msgSecaoBlusas = "BLOUSES ";
 
+    // Cenário: Acessar a seção para mulheres
+
     @Test
     public void CT01_AcessarSecaoCamisetas() {
         sectionWomen.expandirMenuWomen();
