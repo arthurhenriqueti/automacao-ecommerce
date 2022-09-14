@@ -12,14 +12,14 @@ public class SectionWomenTests extends BaseTest {
     String msgSecaoBlusas = "BLOUSES ";
 
     @Test
-    public void acessarSecaoCamisetas() {
+    public void CT01_AcessarSecaoCamisetas() {
         sectionWomen.expandirMenuWomen();
         sectionWomen.acessarSecaoCamisetas();
         Assert.assertEquals(msgSecaoCamisetas, sectionWomen.validarMsgSecaoCamisetas());
     }
 
     @Test
-    public void acessarSecaoBlusas() {
+    public void CT02_AcessarSecaoBlusas() {
         sectionWomen.expandirMenuWomen();
         sectionWomen.acessarSecaoBlusas();
         Assert.assertEquals(msgSecaoBlusas, sectionWomen.validarMsgSecaoBlusas());
