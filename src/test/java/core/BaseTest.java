@@ -14,7 +14,7 @@ public class BaseTest {
     @Before
     public void iniciar() {
         getDriver().manage().window().maximize();
-        getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        getDriver().manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         getDriver().get("http://automationpractice.com/index.php");
         Assert.assertEquals("My Store", getDriver().getTitle());
     }
