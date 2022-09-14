@@ -2,6 +2,7 @@ package core;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
 import static core.DriverFactory.getDriver;
@@ -24,6 +25,12 @@ public class BasePage {
 
     public void clicarBotaoPeloXpath(String xpath_campo) {
         getDriver().findElement(By.xpath(xpath_campo)).click();
+    }
+
+    public void expandirMenuPeloXpath(String xpath_campo) {
+        WebElement element = getDriver().findElement(By.xpath(xpath_campo));
+        Actions action = new Actions(getDriver());
+        action.moveToElement(element).perform();
     }
 
     public String obterTextoPeloId(String id_campo) {
