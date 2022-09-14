@@ -8,11 +8,14 @@ import pages.LoginPage;
 public class LoginTests extends BaseTest {
 
     LoginPage login = new LoginPage();
+    String emailCorreto = "arthurtestando@gg.com";
+    String senhaCorreta = "123456789a";
     String emailIncorreto = "testando@gg.com";
     String senhaIncorreta = "123";
     String msgEmailNaoPreenchido = "An email address required.";
     String msgSenhaNaoPreenchida = "Password is required.";
     String msgDadosIncorretos = "Invalid password.";
+    String msgDadosCorretos = "Welcome to your account. Here you can manage all of your personal information and orders.";
 
     // Cenário: Efetuar login na plataforma
 
@@ -46,5 +49,14 @@ public class LoginTests extends BaseTest {
         login.escreverSenha(senhaIncorreta);
         login.clicarBotaoLogin();
         Assert.assertEquals(msgDadosIncorretos, login.validarMsgDadosIncorretos());
+    }
+
+    @Test
+    public void CT05_DadosCorretos() {
+        login.acessarPaginaLogin();
+        login.escreverEmail(emailCorreto);
+        login.escreverSenha(senhaCorreta);
+        login.clicarBotaoLogin();
+        Assert.assertEquals(msgDadosCorretos, login.validarMsgDadosCorretos());
     }
 }

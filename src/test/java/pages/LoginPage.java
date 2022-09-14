@@ -31,4 +31,8 @@ public class LoginPage extends BasePage {
     public String validarMsgDadosIncorretos() {
         return obterTextoPeloXpath("/html/body/div/div[2]/div/div[3]/div/div[1]/ol/li");
     }
+
+    public String validarMsgDadosCorretos() {
+        return obterTextoPeloXpath("/html/body/div/div[2]/div/div[3]/div/p");
+    }
 }
