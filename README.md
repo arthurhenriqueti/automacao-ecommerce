@@ -10,8 +10,10 @@ Especificações:
 - geckodriver (incluído nos arquivos)
 - chromedriver (incluído nos arquivos)
 
-Testes concluídos:
+Testes criados:
 - Login
 - Contato
+- Buscador
+- Seção para mulheres
 
 Obs: Algumas funcionalidades do site não serão testadas!
